@@ -117,7 +117,7 @@
               this.getNextMatchs()
           },
           methods: {
-              getNextMatchs() {
+            getNextMatchs() {
                this.$http.get(BASE_URL_MATCH).then(res => this.checkDate(res.body))},
               checkDate(matchs) {
                 matchs.map(match => {
@@ -125,6 +125,7 @@
                      this.matchs.push(match)
                   }
                 })
+                console.log(this.matchs)
               }
           }
       })
