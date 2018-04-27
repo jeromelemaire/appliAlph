@@ -94,7 +94,7 @@
                         <p>{{match.date}} à {{match.hour}}</p>
                     </div>
                     <div class="item-social pt-2">
-                        Salle Léo Lagrange, <br> Achicourt
+                    
                         </a>
                     </div>
                 </div>
@@ -136,7 +136,7 @@
                     console.log(moment().format('w'), moment(match.date).format('w'))
                   if(new Date(match.date) > new Date() && moment().format('w') === moment(match.date).format('w')) {
                       match.date = moment(match.date).format('DD/MM/YYYY')
-                     this.matchs.push(match)
+                      this.matchs.push(match)
                   }
                 })
               }
