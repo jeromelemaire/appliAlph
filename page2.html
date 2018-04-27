@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="assets/socicon/css/styles.css">
     <link rel="stylesheet" href="assets/theme/css/style.css">
     <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
 
 
 
@@ -62,14 +63,16 @@
                             aria-expanded="false">
                             <span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
                             Le club&nbsp;</a>
-                            <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
-                                <a class="text-black dropdown-item display-4" href="page2.html">Matchs du week-end</a> 
-                                <a class="text-black dropdown-item display-4" href="page3.html">Derniers résultats</a>
+                            <div class="dropdown-menu">
+                                    <a class="text-black dropdown-item display-4" href="index.html">Accueil</a> 
+                                    <a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
+                                <a class="text-black dropdown-item display-4" href="page2.html">Derniers résultats</a> 
+                                <a class="text-black dropdown-item display-4" href="page3.html">Matchs du week-end</a>
                             </div>
                     </li>
                 </ul>
                 <div class="navbar-buttons mbr-section-btn">
-                    <a class="btn btn-sm btn-primary display-4" href="https://mobirise.com">
+                    <a style="color: white" class="btn btn-sm btn-primary display-4" onclick="toastr.warning('Non disponible dans cette version')">
                         <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>
                         Espace membre</a>
                 </div>
@@ -126,6 +129,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.13/vue.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-resource/1.4.0/vue-resource.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.1/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
     <script>
         const BASE_URL_MATCH = 'https://api.mlab.com/api/1/databases/alph/collections/matchs?apiKey=0RoAk8XQ7vyGTVhc__UiTIfgbHwgaHpR'
         let vm = new Vue({

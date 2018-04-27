@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   
   
   
@@ -53,13 +54,18 @@
                 <li class="nav-item dropdown">
                     <a class="nav-link link text-black dropdown-toggle display-4" href="index.html" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
                         Le club&nbsp;</a>
-                        <div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
-                            <a class="text-black dropdown-item display-4" href="page2.html">Matchs du week-end</a> 
-                            <a class="text-black dropdown-item display-4" href="page3.html">Derniers résultats</a>
+                        <div class="dropdown-menu">
+                                <a class="text-black dropdown-item display-4" href="index.html">Accueil</a> 
+                                <a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
+                            <a class="text-black dropdown-item display-4" href="page2.html">Derniers résultats</a> 
+                            <a class="text-black dropdown-item display-4" href="page3.html">Matchs du week-end</a>
                         </div>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="index.html"><span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>
-                    Espace membre</a></div>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a style="color: white" class="btn btn-sm btn-primary display-4" onclick="toastr.warning('Non disponible dans cette version')">
+                        <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>
+                        Espace membre</a>
+                </div>
         </div>
     </nav>
 </section>
@@ -223,6 +229,7 @@
   <script src="assets/dropdown/js/script.min.js"></script>
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   
   
 </body>
