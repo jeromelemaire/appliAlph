@@ -57,7 +57,7 @@
                         Le club&nbsp;</a>
                         <div class="dropdown-menu">
                                 <a class="text-black dropdown-item display-4" href="index.html">Accueil</a> 
-                            <a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
+                            <a class="text-black dropdown-item display-4" onclick="toastr.warning('Non disponible dans cette version.')">Actualités</a> 
                             <a class="text-black dropdown-item display-4" href="page2.html">Derniers résultats</a> 
                             <a class="text-black dropdown-item display-4" href="page3.html">Matchs du week-end</a>
                         </div>
@@ -133,12 +133,12 @@
                this.$http.get(BASE_URL_MATCH).then(res => this.checkDate(res.body))},
               checkDate(matchs) {
                 matchs.map(match => {
-                  if(new Date(match.date) > new Date()) {
-                      match.date = moment(match.date).format('DD/MM')
+                    console.log(moment().format('w'), moment(match.date).format('w'))
+                  if(new Date(match.date) > new Date() && moment().format('w') === moment(match.date).format('w')) {
+                      match.date = moment(match.date).format('DD/MM/YYYY')
                      this.matchs.push(match)
                   }
                 })
-                console.log(this.matchs)
               }
           }
       })

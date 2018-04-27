@@ -65,7 +65,7 @@
                             Le club&nbsp;</a>
                             <div class="dropdown-menu">
                                     <a class="text-black dropdown-item display-4" href="index.html">Accueil</a> 
-                                    <a class="text-black dropdown-item display-4" href="page1.html">Actualités</a> 
+                                    <a class="text-black dropdown-item display-4" onclick="toastr.warning('Non disponible dans cette version.')">Actualités</a> 
                                 <a class="text-black dropdown-item display-4" href="page2.html">Derniers résultats</a> 
                                 <a class="text-black dropdown-item display-4" href="page3.html">Matchs du week-end</a>
                             </div>
@@ -94,8 +94,8 @@
 
                 <div v-for="match in this.matchs" class="team-item col-lg-3 col-md-6">
                     <div class="item-image">
-                        <img src="./assets/images/trophy.png">
-                        <img v-else src="./assets/images/sad.png">
+                        <img v-if="match.result[0] > match.result[1]" src="./assets/images/trophy.png">
+                        <img v-else src="./assets/images/sad.jpg">
                     </div>
                     <div class="item-caption py-3">
                         <div class="item-name px-2">
@@ -148,7 +148,7 @@
                 },
                 checkDate(matchs) {
                     matchs.map(match => {
-                        if (new Date(match.date) > new Date() && match.result[0] !== '' || match.result[1] !== '') {
+                        if (new Date(match.date) > new Date() && match.result[0] !== '' || match.result[1] !== '' && moment().format('w') === moment(match.date).format(w)) {
                             match.date = moment(match.date).format('DD/MM/YYYY')
                             this.matchs.push(match)
                         }
