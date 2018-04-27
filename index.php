@@ -17,6 +17,7 @@
   <link rel="stylesheet" href="assets/dropdown/css/style.css">
   <link rel="stylesheet" href="assets/theme/css/style.css">
   <link rel="stylesheet" href="assets/mobirise/css/mbr-additional.css" type="text/css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css">
   
   
   
@@ -38,24 +39,33 @@
         <div class="menu-logo">
             <div class="navbar-brand">
                 <span class="navbar-logo">
-                    <a href="https://mobirise.com">
+                    <a href="index.html">
                          <img src="assets/images/logo-alph-960x720.jpg" alt="Mobirise" title="" style="height: 3.8rem;">
                     </a>
                 </span>
-                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="https://mobirise.com">ALPH BASKET</a></span>
+                <span class="navbar-caption-wrap"><a class="navbar-caption text-black display-4" href="index.html">ALPH BASKET</a></span>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav nav-dropdown" data-app-modern-menu="true"><li class="nav-item">
-                    <a class="nav-link link text-black display-4" href="https://mobirise.com">
+                    <a class="nav-link link text-black display-4" href="index.html">
                         </a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a class="nav-link link text-black dropdown-toggle display-4" href="https://mobirise.com" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
-                        Le club&nbsp;</a><div class="dropdown-menu"><a class="text-black dropdown-item display-4" href="page1.html">Actualités<br>Derniers résultats<br>Matchs du week-end</a></div>
+                    <a class="nav-link link text-black dropdown-toggle display-4" href="index.html" data-toggle="dropdown-submenu" aria-expanded="false"><span class="mbri-home mbr-iconfont mbr-iconfont-btn"></span>
+                        Le club&nbsp;</a>
+                        <div class="dropdown-menu">
+                                <a class="text-black dropdown-item display-4" href="index.html">Accueil</a> 
+                            <a class="text-black dropdown-item display-4" onclick="toastr.warning('Non disponible dans cette version.')">Actualités</a> 
+                            <a class="text-black dropdown-item display-4" href="page2.html">Derniers résultats</a> 
+                            <a class="text-black dropdown-item display-4" href="page3.html">Matchs du week-end</a>
+                        </div>
                 </li></ul>
-            <div class="navbar-buttons mbr-section-btn"><a class="btn btn-sm btn-primary display-4" href="https://mobirise.com"><span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>
-                    Espace membre</a></div>
+                <div class="navbar-buttons mbr-section-btn">
+                    <a style="color: white" class="btn btn-sm btn-primary display-4" onclick="toastr.warning('Non disponible dans cette version')">
+                        <span class="mbri-users mbr-iconfont mbr-iconfont-btn"></span>
+                        Espace membre</a>
+                </div>
         </div>
     </nav>
 </section>
@@ -87,7 +97,7 @@
     <div class="container">
         <div class="media-container-row">
             <div class="mbr-text col-12 col-md-8 mbr-fonts-style display-7">
-                <blockquote> <strong>Make your own website in a few clicks!</strong> Mobirise helps you cut down development time by providing you with a flexible website editor with a drag and drop interface. Mobirise Website Builder creates responsive, retina and <strong>mobile friendly websites</strong> in a few clicks. Mobirise is one of the easiest website development tools <a href="https://mobirise.com/">available</a> today. It also gives you the freedom to develop as many websites as you like given the fact that it is a desktop app.</blockquote>
+                <blockquote> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</blockquote>
             </div>
         </div>
     </div>
@@ -103,6 +113,7 @@
   <script src="assets/touchswipe/jquery.touch-swipe.min.js"></script>
   <script src="assets/parallax/jarallax.min.js"></script>
   <script src="assets/theme/js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
   
   
 </body>
